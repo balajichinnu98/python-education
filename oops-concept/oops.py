@@ -109,38 +109,51 @@
 
 # arguments are passed below in polymorphism concept
 
-# class John:
-#     def __init__(self,name):
-#         self.name = name    
+class John:
+    def __init__(self,name):
+        self.name = name    
 
-#     def tester(self):
-#         return "{} is a tester".format(self.name)
+    def tester(self):
+        return "{} is a tester".format(self.name)
 
-# class Mike:
-#     def __init__(self,name):
-#         self.name = name    
+class Mike:
+    def __init__(self,name):
+        self.name = name    
 
-#     def tester(self):
-#         return "{} is a tester".format(self.name)
+    def tester(self):
+        return "{} is a tester".format(self.name)
     
-# class Sarah:
-#     def __init__(self,name):
-#         self.name = name    
+class Sarah:
+    def __init__(self,name):
+        self.name = name    
 
-#     def tester(self):
-#         return "{} is a tester".format(self.name)
+    def tester(self):
+        return "{} is a tester".format(self.name)
 
-# john = John("John Wick")
-# mike = Mike("Mike Tyson")
-# sarah = Sarah("Sarah Connor")
+john = John("John Wick")
+mike = Mike("Mike Tyson")
+sarah = Sarah("Sarah Connor")
 
-# print(john.tester())
-# print(mike.tester())
+print(john.tester())
+print(mike.tester())
 
-# for person in (john, mike,sarah):
-#     print(person.tester())
+for person in (john, mike,sarah):
+    print(person.tester())
 
 ########################################
 
 
+##### USING def __str__ instead of defining a method as john.tester() just print(john) will work ######
 
+# class tester:
+#     def __init__(self,name):
+#         self.name = name    
+
+#     def __str__(self):
+#         return "{} is a tester".format(self.name)
+
+# john = tester("John Wick")
+# print(john)
+
+
+####################################
